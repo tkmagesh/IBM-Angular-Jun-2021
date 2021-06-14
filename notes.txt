@@ -15,5 +15,86 @@ Any books you have read / Any shows you watch (that you recommend)
 What is Angular?
     framework for building Rich Internet Applications
 
+Reactive X Proactive
 
-ES6
+
+ES6 (ES2015, ECMAScript6, ESNext)
+    1. let
+    2. const
+    3. array destructuring
+    4. rest operator (array)
+    5. spread operator(array)
+    6. object destructuring
+    7. rest operator (object)
+    8. spread operator(object)
+    9. default arguments
+    10. arrow functions
+    11. iterators
+    12. generators
+    13. classes
+    14. template strings
+
+for more info -> http://es6-features.org
+
+
+Typescript
+    Typesafe javascript
+
+let x : number = 100;
+
+function add(x : number ,y : number) : number {
+    return x + y
+}
+
+add('abc', 100)
+    |
+    |
+    V
+    tsc
+    |
+    |
+
+function add(x ,y) {
+    return x + y
+}
+
+Typesafety is only during development and not at runtime
+
+interfaces
+enums
+
+node.js (http://nodejs.org)
+visual studio code (http://code.visualstudio.com) / atom 
+
+
+Angular Building Blocks
+========================
+    Module
+        Directory of application entites (component, directive, pipe, service)
+        Helps in the dependency injection
+        starting point of the application
+        There has to be a minimum of 1 module in an angular application
+
+    Component 
+        To build the views 
+        Encapsulates Presenation (HTML & CSS) + UI Behavior + UI State
+        State & View synchronization is built in
+        Components can be composed to create new components
+
+    Directive
+        Low level DOM manipulation 
+
+    Pipe
+        Data transformation for presentation
+
+    Service
+        Non UI responsibilities
+
+
+Application Setup
+    setup typescript compiler
+    setup web server
+    install the angular libraries
+    setup build 
+
+[sudo] npm install @angular/cli  -g
