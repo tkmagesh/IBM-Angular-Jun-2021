@@ -1,0 +1,13 @@
+Schedule
+    Start       : 09:30
+    Tea Break   : 11:30 (for 20 mins)
+    Lunch Break : 13:00 (for 60 mins)
+    Tea Break   : 15:00 (for 20 mins)
+    Windup      : 17:30
+
+
+Name
+Experience
+Primary Skillset
+Experience in Angular (if any)
+Any books you have read / Any shows you watch (that you recommend)
