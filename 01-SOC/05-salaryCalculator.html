@@ -50,7 +50,7 @@
         }
         //behaviour
         SalaryCalculatorModel.prototype.calculate = function(){
-            var gross = this.basic + this.hra + this.da,
+            var gross = this.getBasic() + this.hra + this.da,
                 net = gross * ((100-this.tax)/100) ;
             this.salary = net;
             this.onSalaryChange();
