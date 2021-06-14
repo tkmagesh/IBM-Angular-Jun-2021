@@ -9,5 +9,11 @@ Schedule
 Name
 Experience
 Primary Skillset
-Experience in Angular (if any)
+Experience in Angular or any frontend frameworks (if any)
 Any books you have read / Any shows you watch (that you recommend)
+
+What is Angular?
+    framework for building Rich Internet Applications
+
+
+ES6
