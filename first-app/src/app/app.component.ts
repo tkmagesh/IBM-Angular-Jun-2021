@@ -6,11 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'first-app';
+  selectedOption : string = ''
 
-  constructor(){
-    setInterval(() => {
-      this.title = Date();
-    }, 1000)
-  }
+ 
 }
