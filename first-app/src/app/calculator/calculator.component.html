@@ -15,13 +15,15 @@
 <input type="button" value="Subtract" (click)="onBtnSubtractClick()">
 <input type="button" value="Multiply" (click)="onBtnMultiplyClick()">
 <input type="button" value="Divide" (click)="onBtnDivideClick()">
-<div>{{result}}</div>
+<div class="result" [ngClass]="{ positive : result >= 0, negative : result < 0 }" >
+    {{result}}
+</div>
 
-<div>
+<!-- <div>
     <label for="">Number 1 : </label>
     <span>{{n1}}</span>
     <br>
     <label for="">Number 2 : </label>
     <span>{{n2}}</span>
-</div> 
+</div>  -->
 
