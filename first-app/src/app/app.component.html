@@ -1,7 +1,14 @@
 <h1>My First Angular App</h1>
 <input type="button" value="Greeter" (click)="selectedOption='greeter'">
 <input type="button" value="Calculator" (click)="selectedOption='calculator'">
+<!-- 
 <hr>
 <app-greeter *ngIf="selectedOption==='greeter'"></app-greeter>
 <hr/>
-<app-calculator *ngIf="selectedOption==='calculator'"></app-calculator>
+<app-calculator *ngIf="selectedOption==='calculator'"></app-calculator> 
+-->
+<div [ngSwitch]="selectedOption">
+    <app-greeter *ngSwitchCase="'greeter'"></app-greeter>
+    <app-calculator *ngSwitchCase="'calculator'"></app-calculator>
+    <div *ngSwitchDefault>Select an option!</div>
+</div>
