@@ -104,3 +104,18 @@ ES6 Modules
     Everything defined in a JS/TS file is considered private
     Any public entity has to explicitly exported
     To use any public entity from another file, it has to be explicity imported
+
+
+Assignment
+Create a component for the following template 
+
+<h3>Calculator</h3>
+<hr>
+<input type="number" >
+<input type="number" >
+<input type="button" value="Add">
+<input type="button" value="Subtract">
+<input type="button" value="Multiply">
+<input type="button" value="Divide">
+<div>[Result]</div>
+
