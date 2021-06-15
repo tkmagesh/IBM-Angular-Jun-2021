@@ -1,6 +1,9 @@
 <h3>Greeter</h3>
 <hr>
 <label for="">User Name :</label>
-<input type="text" name="" id="">
-<input type="button" value="Greet">
-<div class="greetMessage">[Greet Message]</div>
+<input type="text" #txtUserName >
+<!-- <input type="button" value="Greet" (click)="message='Greet button clicked!'"> -->
+<!-- <input type="button" value="Greet" (click)="onBtnGreetClick()"> -->
+<!-- <input type="button" value="Greet" (click)="onBtnGreetClick('a dummy message')"> -->
+<input type="button" value="Greet" (click)="onBtnGreetClick(txtUserName.value)">
+<div class="greetMessage">{{message}}</div>
