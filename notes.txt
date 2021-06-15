@@ -83,6 +83,15 @@ Angular Building Blocks
 
     Directive
         Low level DOM manipulation 
+        Types of directives
+            Attribute directive
+                Used to manipulate the attribute of an existing dom node
+                Doesnt change the structure of the dom tree
+                used with the [] syntax
+
+            Structural directive
+                Changes the structure of the dom tree by adding / removing dom nodes
+                prefixed with *
 
     Pipe
         Data transformation for presentation

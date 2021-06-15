@@ -15,7 +15,10 @@
 <input type="button" value="Subtract" (click)="onBtnSubtractClick()">
 <input type="button" value="Multiply" (click)="onBtnMultiplyClick()">
 <input type="button" value="Divide" (click)="onBtnDivideClick()">
-<div class="result" [ngClass]="{ positive : result >= 0, negative : result < 0 }" >
+<div
+    *ngIf="result !== 0"
+    class="result" 
+    [ngClass]="{ positive : result >= 0, negative : result < 0 }" >
     {{result}}
 </div>
 
