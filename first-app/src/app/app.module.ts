@@ -2,13 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 import { GreeterComponent } from './greeter/greeter.component';
 
 @NgModule({
   /* declarations - Register all the UI entites of our application (component, directive, pipe) */
   declarations: [
     AppComponent,
-    GreeterComponent
+    GreeterComponent,
+    CalculatorComponent
   ],
   /* imports - other modules that this module depends on */
   imports: [
@@ -18,6 +20,6 @@ import { GreeterComponent } from './greeter/greeter.component';
   providers: [],
   /* bootstrap - top level components of the application */
   /* bootstrap: [AppComponent] */
-  bootstrap : [GreeterComponent]
+  bootstrap : [GreeterComponent, CalculatorComponent]
 })
 export class AppModule { }
