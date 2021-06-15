@@ -1,0 +1,36 @@
+<h3>Salary Calculator</h3>
+<hr>
+<section>
+    <div class="field">
+        <label for="">Basic :</label>
+        <input type="number" (change)="calculatorService.basic = $any($event.target).valueAsNumber">
+    </div>
+    <div class="field">
+        <label for="">HRA :</label>
+        <input type="number" (change)="calculatorService.hra = $any($event.target).valueAsNumber">
+    </div>
+    <div class="field">
+        <label for="">DA :</label>
+        <input type="number" (change)="calculatorService.da = $any($event.target).valueAsNumber">
+    </div>
+    <div class="field">
+        <label for="">Tax :</label>
+        <input type="range" min="0" max="30" value="0" (change)="calculatorService.tax = $any($event.target).valueAsNumber">
+    </div>
+    <div class="field">
+        <input type="button" value="Calculate" (click)="calculatorService.calculate()">
+    </div>
+    <div class="field">
+        <table>
+            <tbody>
+                <tr>
+                    <td>{{calculatorService.basic}}</td>
+                    <td>{{calculatorService.hra}}</td>
+                    <td>{{calculatorService.da}}</td>
+                    <td>{{calculatorService.tax}}</td>
+                    <td>{{calculatorService.salary}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
