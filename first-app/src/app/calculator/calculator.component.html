@@ -18,8 +18,9 @@
 <div
     *ngIf="result !== 0"
     class="result" 
-    [ngClass]="{ positive : result >= 0, negative : result < 0 }" >
-    {{result}}
+    [ngClass]="{ positive : result >= 0, negative : result < 0 }" 
+>
+    {{result | currency:'INR'}}
 </div>
 
 <!-- <div>
