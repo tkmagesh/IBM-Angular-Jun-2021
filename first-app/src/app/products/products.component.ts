@@ -6,4 +6,12 @@ import { Component } from "@angular/core";
 })
 export class ProductsComponent{
     productNames : string[] = ['Pen']
+
+    onBtnAddNewClick(newProductName : string){
+        this.productNames.push(newProductName)
+    }
+
+    onBtnRemoveClick(productName : string){
+        this.productNames.splice(this.productNames.indexOf(productName), 1)
+    }
 }
