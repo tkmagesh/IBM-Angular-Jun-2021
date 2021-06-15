@@ -1,6 +1,7 @@
 <h1>My First Angular App</h1>
 <input type="button" value="Greeter" (click)="selectedOption='greeter'">
 <input type="button" value="Calculator" (click)="selectedOption='calculator'">
+<input type="button" value="Products" (click)="selectedOption='products'">
 <!-- 
 <hr>
 <app-greeter *ngIf="selectedOption==='greeter'"></app-greeter>
@@ -10,5 +11,6 @@
 <div [ngSwitch]="selectedOption">
     <app-greeter *ngSwitchCase="'greeter'"></app-greeter>
     <app-calculator *ngSwitchCase="'calculator'"></app-calculator>
+    <app-products *ngSwitchCase="'products'"></app-products>
     <div *ngSwitchDefault>Select an option!</div>
 </div>

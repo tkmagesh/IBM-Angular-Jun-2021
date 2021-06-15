@@ -4,13 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { GreeterComponent } from './greeter/greeter.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   /* declarations - Register all the UI entites of our application (component, directive, pipe) */
   declarations: [
     AppComponent,
     GreeterComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    ProductsComponent
   ],
   /* imports - other modules that this module depends on */
   imports: [
