@@ -98,3 +98,9 @@ Application Setup
     setup build 
 
 [sudo] npm install @angular/cli  -g
+
+
+ES6 Modules
+    Everything defined in a JS/TS file is considered private
+    Any public entity has to explicitly exported
+    To use any public entity from another file, it has to be explicity imported
