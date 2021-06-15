@@ -5,5 +5,5 @@ import { Component } from "@angular/core";
     templateUrl : './products.component.html'
 })
 export class ProductsComponent{
-    productNames : string[] = ['Pen', 'Pencil', 'Marker', 'Scribble Pad']
+    productNames : string[] = ['Pen']
 }
