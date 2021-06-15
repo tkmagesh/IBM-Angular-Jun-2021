@@ -128,3 +128,10 @@ Create a component for the following template
 <input type="button" value="Divide">
 <div>[Result]</div>
 
+
+Homework
+    Study the following Array Methods :
+        forEach
+        map
+        reduce
+        filter
