@@ -20,6 +20,6 @@ import { GreeterComponent } from './greeter/greeter.component';
   providers: [],
   /* bootstrap - top level components of the application */
   /* bootstrap: [AppComponent] */
-  bootstrap : [GreeterComponent, CalculatorComponent]
+  bootstrap : [AppComponent]
 })
 export class AppModule { }
