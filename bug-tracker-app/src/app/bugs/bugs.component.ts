@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Bug } from "./models/bug";
+import { BugStorageService } from "./services/bugStorage.service";
 
 @Component({
     selector : 'app-bugs',
@@ -8,26 +9,32 @@ import { Bug } from "./models/bug";
 })
 export class BugsComponent{
 
-    private _currentBugId : number = 0;
 
     bugs : Bug[] = [];
 
+    constructor(private bugStorage : BugStorageService){
+        this.bugs = this.bugStorage.getAll()
+    }
+
     onAddNewClick(newBugName : string){
         const newBug : Bug = {
-            id : ++this._currentBugId,
+            id : 0,
             name : newBugName,
             isClosed : false,
             createdAt : new Date()
         }
+        this.bugStorage.save(newBug)
         this.bugs.push(newBug)
     }
 
     onRemoveClick(bugToRemove : Bug){
+        this.bugStorage.remove(bugToRemove)
         this.bugs.splice(this.bugs.indexOf(bugToRemove), 1)
     }
 
     onBugNameClick(bugToToggle : Bug){
         bugToToggle.isClosed = !bugToToggle.isClosed;
+        this.bugStorage.save(bugToToggle)
     }
 
     onRemoveClosedClick(){
@@ -39,7 +46,9 @@ export class BugsComponent{
         }  
         */
        
-        this.bugs = this.bugs.filter(bug => !bug.isClosed)
+        this.bugs
+            .filter(bug => bug.isClosed)
+            .forEach(this.onRemoveClick)
     }
 
     getClosedCount() : number {
