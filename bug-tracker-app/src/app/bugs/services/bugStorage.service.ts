@@ -1,5 +1,9 @@
+import { Injectable } from "@angular/core";
 import { Bug } from "../models/bug";
 
+@Injectable({
+    providedIn : 'root'
+})
 export class BugStorageService{
     private storage : Storage = window.localStorage;
     private _currentBugId : number = 0;
@@ -13,6 +17,7 @@ export class BugStorageService{
                 if ( rawString ) {
                     let bug = JSON.parse(rawString);
                     bugs.push(bug);
+                    this._currentBugId = this._currentBugId > bug.id ? this._currentBugId : bug.id;
                 }
             }
         }

@@ -2,7 +2,7 @@
 <section class="stats">
     <span class="closed">{{getClosedCount()}}</span> <!-- TO BE Fixed -->
     <span> / </span>
-    <span>{{bugs.length}}</span>
+    <span>{{bugOperations.bugs.length}}</span>
 </section>
 <section class="sort">
     <label for="">Order By :</label>
@@ -21,7 +21,7 @@
 </section>
 <section class="list">
     <ol>
-        <li *ngFor="let bug of bugs">
+        <li *ngFor="let bug of bugOperations.bugs">
             <span 
                 class="bugname" 
                 [ngClass]="{closed : bug.isClosed}"
