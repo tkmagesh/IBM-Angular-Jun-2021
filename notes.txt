@@ -135,3 +135,6 @@ Homework
         map
         reduce
         filter
+
+
+ng new bug-tracker-app
