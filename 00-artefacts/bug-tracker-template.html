@@ -16,6 +16,23 @@
             (done) 7. Improvise bug display
             8. Sort the bugs
             9. Persist the bugs in the localStorage
+                window.localStorage
+                ===================
+                    * key/value store
+                    * key has to be unique
+                    * both key & value must be strings
+                        Hint: use JSON.stringify & JSON.parse for serialization and deserialization
+                    * follows Same Origin Policy
+                    * ~10 storage limit per origin
+                    * APIs
+                    ------
+                        - setItem(key, value)
+                        - getItem(key) => value / null
+                        - removeItem(key)
+                        - key(index) => key @ index
+                        - clear()
+                        - length => # of items in the storage
+                        
             10. Improvise the diplaying of 'created At' for each bug
             11. Implement validations (Angular forms)
             12. Persist the bugs in the server
