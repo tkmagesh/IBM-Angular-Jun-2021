@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BugsComponent } from './bugs/bugs.component';
 import { ClosedCountPipe } from './bugs/pipes/closedCount.pipe';
+import { ElapsedPipe } from './bugs/pipes/elapsed.pipe';
 import { TrimTextPipe } from './bugs/pipes/trimText.pipe';
 /* 
 import { BugOperationsService } from './bugs/services/bugOperations.service';
@@ -15,7 +16,8 @@ import { BugStorageService } from './bugs/services/bugStorage.service';
     AppComponent,
     BugsComponent,
     TrimTextPipe,
-    ClosedCountPipe
+    ClosedCountPipe,
+    ElapsedPipe
   ],
   imports: [
     BrowserModule

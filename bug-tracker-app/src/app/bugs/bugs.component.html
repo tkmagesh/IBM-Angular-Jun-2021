@@ -30,7 +30,7 @@
             >
                 {{bug.name | trimText}}
             </span>
-            <div class="datetime">{{bug.createdAt}}</div>
+            <div class="datetime">{{bug.createdAt | elapsed}}</div>
             <input type="button" value="Remove" (click)="onRemoveClick(bug)">
         </li>
     </ol>
