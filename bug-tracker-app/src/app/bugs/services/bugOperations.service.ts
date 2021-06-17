@@ -19,12 +19,17 @@ export class BugOperationsService{
             createdAt : new Date()
         };
         this.bugStorage.save(newBug)
-        this.bugs.push(newBug);
+        //this.bugs.push(newBug);
+        this.bugs = [...this.bugs, newBug]
     }
 
     toggle(bugToToggle : Bug){
-        bugToToggle.isClosed = !bugToToggle.isClosed
-        this.bugStorage.save(bugToToggle)
+        //mutation
+        //bugToToggle.isClosed = !bugToToggle.isClosed
+        //immutable
+        const toggledBug = { ...bugToToggle, isClosed : !bugToToggle.isClosed}
+        this.bugStorage.save(toggledBug)
+        this.bugs = this.bugs.map(bug => bug.id === toggledBug.id ? toggledBug : bug)
     }
 
     loadBugs(){
@@ -33,7 +38,8 @@ export class BugOperationsService{
 
     remove(bugToRemove : Bug){
         this.bugStorage.remove(bugToRemove);
-        this.bugs.splice(this.bugs.indexOf(bugToRemove), 1)
+        //this.bugs.splice(this.bugs.indexOf(bugToRemove), 1)
+        this.bugs = this.bugs.filter(bug => bug.id !== bugToRemove.id)
     }
 
     removeClosed(){

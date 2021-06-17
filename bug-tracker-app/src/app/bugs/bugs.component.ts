@@ -10,13 +10,14 @@ import { BugOperationsService } from "./services/bugOperations.service";
 })
 export class BugsComponent{
     
+    newBugName : string = ''
 
     constructor( public bugOperations : BugOperationsService){
         this.bugOperations.loadBugs()
     }
 
-    onAddNewClick(newBugName : string){
-        this.bugOperations.createNew(newBugName)
+    onAddNewClick(){
+        this.bugOperations.createNew(this.newBugName)
     }
 
     onRemoveClick(bugToRemove : Bug){
@@ -44,4 +45,9 @@ export class BugsComponent{
         //return this.bugs.reduce((result, bug) => bug.isClosed ? result + 1 : result, 0)
         return 0;
     }
+
+    /* getTrimText(data:string) : string {
+        console.log('getTrimText triggered')
+        return data.length <= 30 ? data : data.substr(0,30) + '...';
+    } */
 }

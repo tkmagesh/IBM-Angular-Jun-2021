@@ -1,6 +1,6 @@
 <h3>Bugs</h3>
 <section class="stats">
-    <span class="closed">{{getClosedCount()}}</span> <!-- TO BE Fixed -->
+    <span class="closed">{{bugOperations.bugs | closedCount }}</span> <!-- TO BE Fixed -->
     <span> / </span>
     <span>{{bugOperations.bugs.length}}</span>
 </section>
@@ -16,8 +16,9 @@
 </section>
 <section class="edit">
     <label for="">Bug Name :</label>
-    <input type="text" #txtNewBugName>
-    <input type="button" value="Add New" (click)="onAddNewClick(txtNewBugName.value)">
+    <input type="text" (input)="newBugName = $any($event.target).value">
+    <span> [ {{newBugName.length}} ] </span>
+    <input type="button" value="Add New" (click)="onAddNewClick()">
 </section>
 <section class="list">
     <ol>
@@ -27,7 +28,7 @@
                 [ngClass]="{closed : bug.isClosed}"
                 (click)="onBugNameClick(bug)"
             >
-                {{bug.name | trimText:30}}
+                {{bug.name | trimText}}
             </span>
             <div class="datetime">{{bug.createdAt}}</div>
             <input type="button" value="Remove" (click)="onRemoveClick(bug)">
