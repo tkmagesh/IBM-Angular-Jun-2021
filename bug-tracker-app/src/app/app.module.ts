@@ -6,25 +6,24 @@ import { BugsComponent } from './bugs/bugs.component';
 import { BugEditComponent } from './bugs/components/bugEdit/bugEdit.component';
 import { BugStatsComponent } from './bugs/components/bugStats/bugStats.component';
 import { ClosedCountPipe } from './bugs/pipes/closedCount.pipe';
-import { ElapsedPipe } from './bugs/pipes/elapsed.pipe';
-import { TrimTextPipe } from './bugs/pipes/trimText.pipe';
 /* 
 import { BugOperationsService } from './bugs/services/bugOperations.service';
 import { BugStorageService } from './bugs/services/bugStorage.service'; 
 */
 
+import { UtilsModule } from './utils/utils.module';
+
 @NgModule({
   declarations: [
     AppComponent,
     BugsComponent,
-    TrimTextPipe,
     ClosedCountPipe,
-    ElapsedPipe,
     BugStatsComponent,
     BugEditComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    UtilsModule
   ],
   providers: [
    /*  
