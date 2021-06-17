@@ -10,7 +10,9 @@ import { BugOperationsService } from "./services/bugOperations.service";
 })
 export class BugsComponent{
     
-
+    sortAttrName : string = '';
+    sortByDesc : boolean = false;
+    
     constructor( public bugOperations : BugOperationsService){
         this.bugOperations.loadBugs()
     }

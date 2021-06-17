@@ -2,19 +2,19 @@
 <app-bug-stats [data]="bugOperations.bugs"></app-bug-stats>
 <section class="sort">
     <label for="">Order By :</label>
-    <select name="" id="">
+    <select (change)="sortAttrName = $any($event.target).value">
         <option value="">--- Select ---</option>
-        <option value="">Name</option>
-        <option value="">Status</option>
-        <option value="">Created At</option>
+        <option value="name">Name</option>
+        <option value="isClosed">Status</option>
+        <option value="createdAt">Created At</option>
     </select>
     <label for="">Descending ? :</label>
-    <input type="checkbox" name="" id="">
+    <input type="checkbox" (change)="sortByDesc = $any($event.target).checked">
 </section>
 <app-bug-edit (onAddNewBug)="onNewBugCreation($event)"></app-bug-edit>
 <section class="list">
     <ol>
-        <li *ngFor="let bug of bugOperations.bugs">
+        <li *ngFor="let bug of bugOperations.bugs | sort:sortAttrName:sortByDesc">
             <span 
                 class="bugname" 
                 [ngClass]="{closed : bug.isClosed}"
