@@ -1,9 +1,5 @@
 <h3>Bugs</h3>
-<section class="stats">
-    <span class="closed">{{bugOperations.bugs | closedCount }}</span> <!-- TO BE Fixed -->
-    <span> / </span>
-    <span>{{bugOperations.bugs.length}}</span>
-</section>
+<app-bug-stats [data]="bugOperations.bugs"></app-bug-stats>
 <section class="sort">
     <label for="">Order By :</label>
     <select name="" id="">
