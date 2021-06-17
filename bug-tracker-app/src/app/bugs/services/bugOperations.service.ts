@@ -45,6 +45,6 @@ export class BugOperationsService{
     removeClosed(){
         this.bugs
             .filter(bug => bug.isClosed)
-            .forEach(this.remove)
+            .forEach(bug => this.remove(bug))
     }
 }
