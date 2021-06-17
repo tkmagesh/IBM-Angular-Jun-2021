@@ -10,14 +10,13 @@ import { BugOperationsService } from "./services/bugOperations.service";
 })
 export class BugsComponent{
     
-    newBugName : string = ''
 
     constructor( public bugOperations : BugOperationsService){
         this.bugOperations.loadBugs()
     }
 
-    onAddNewClick(){
-        this.bugOperations.createNew(this.newBugName)
+    onNewBugCreation(newBugName : string){
+        this.bugOperations.createNew(newBugName)
     }
 
     onRemoveClick(bugToRemove : Bug){
