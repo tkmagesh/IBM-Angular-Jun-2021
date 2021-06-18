@@ -46,6 +46,7 @@
 
     window['addAsyncPromise'] = addAsyncPromise;
 
+    /* 
     function addAsyncPromiseClient(x,y){
         console.log(`[@client] invoking the service`);
         const p = addAsyncPromise(100,200);
@@ -53,8 +54,18 @@
         p.then(function(result){
             console.log(`[@client] result = ${result}`);
         })
+    } 
+    */
+
+    async function addAsyncPromiseClient(x,y) {
+        console.log(`[@client] invoking the service`);
+        let result = await addAsyncPromise(x,y);
+        console.log(`[@client] result = ${result}`)
     }
 
     window['addAsyncPromiseClient'] = addAsyncPromiseClient
+
+    
+
 
 })()
