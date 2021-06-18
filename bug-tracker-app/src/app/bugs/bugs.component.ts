@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Bug } from "./models/bug";
 import { BugOperationsService } from "./services/bugOperations.service";
 
@@ -8,13 +8,17 @@ import { BugOperationsService } from "./services/bugOperations.service";
     templateUrl : './bugs.component.html',
     styleUrls : ['./bugs.component.css']
 })
-export class BugsComponent{
+export class BugsComponent implements OnInit{
     
     sortAttrName : string = '';
     sortByDesc : boolean = false;
     
     constructor( public bugOperations : BugOperationsService){
-        this.bugOperations.loadBugs()
+        
+    }
+    
+    ngOnInit(): void {
+        this.bugOperations.loadBugs();
     }
 
     onNewBugCreation(newBugName : string){
