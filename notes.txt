@@ -140,4 +140,29 @@ Homework
 ng new bug-tracker-app
 
 Async Operation
+    Callback
+    Promise
+    Async Await
+    Observables
+
+Observable = inverse of Enumerable (generators)
+    Enumerable = lazy iterable
+
+Rx.Net (Reactive Extension for .NET)
+    Observable
+        operators for manipulating observables
+            filter
+            map
+            scan
+            debounce
+            merge
+            mergeMap
+
+
+Source of events in the browser
+    User Actions (keyboard events, mouse events etc)    (Stream)
+    Ajax                                                (Singular)
+    Timers (setInterval)                                (Stream)
+    Server sent events                                  (Stream)
+    WebSockets                                          (Stream)
 
