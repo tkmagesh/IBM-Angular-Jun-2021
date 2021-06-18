@@ -166,3 +166,19 @@ Source of events in the browser
     Server sent events                                  (Stream)
     WebSockets                                          (Stream)
 
+
+http://www.amazon.in
+http://www.amazon.in/mobile-phones
+http://www.amazon.in/mobile-phones/google
+http://www.amazon.in/mobile-phones/google/pixel-5
+http://www.amazon.in/mobile-phones/google/pixel-5/reviews
+
+
+Outlook
+Outlook/Inbox
+Outlook/Inbox/Projects
+Outlook/Inbox/Projects/Expense-management
+Outlook/Inbox/Projects/Expense-management/bugs
+Outlook/Inbox/Projects/Expense-management/bugs/bug-101
+
+CanActivateGaurd
